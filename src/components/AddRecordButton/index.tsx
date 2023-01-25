@@ -1,6 +1,6 @@
-import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {NavigationProp} from '@react-navigation/native';
 import * as React from 'react';
-import {StyleSheet, Animated, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Button, useTheme} from 'react-native-paper';
 import {Colors} from '../../helpers/interfaces';
 // import {animatedVal1, fadeIn, fadeOut} from '../../utils/animation/fading';

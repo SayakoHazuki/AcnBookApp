@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {Appbar} from 'react-native-paper';
-import store from '../../redux/store';
 
 // declare AppBarProps
 interface AppBarProps {
@@ -26,6 +25,8 @@ function AppBar(props: AppBarProps) {
               key={index}
               icon={action.icon}
               onPress={action.onPress}
+              accessibilityLabelledBy={action.icon}
+              accessibilityLanguage="en"
             />
           ))
         : null}

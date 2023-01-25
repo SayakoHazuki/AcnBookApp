@@ -16,6 +16,6 @@ export default class SettingsScreen extends React.Component<
   }
 
   public render() {
-    return <View></View>;
+    return <View />;
   }
 }

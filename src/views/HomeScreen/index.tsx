@@ -5,8 +5,6 @@ import {AddRecordButton} from '../../components/AddRecordButton';
 import {TransactionsList} from '../../components/TransactionsList';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {InputScreen} from '../InputScreen';
-import {useTheme} from 'react-native-paper';
-import {Colors} from '../../helpers/interfaces';
 
 const Stack = createNativeStackNavigator();
 

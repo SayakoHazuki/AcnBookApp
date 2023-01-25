@@ -10,6 +10,18 @@ const Tab = createMaterialBottomTabNavigator();
 export interface IMenuProps {}
 export interface IMenuState {}
 
+const tabBarIcons = {
+  HomeScreen: ({color}: {color: any}) => (
+    <MaterialCommunityIcons name="home" color={color} size={26} />
+  ),
+  ReportScreen: ({color}: {color: any}) => (
+    <MaterialCommunityIcons name="bell" color={color} size={26} />
+  ),
+  SettingsScreen: ({color}: {color: any}) => (
+    <MaterialCommunityIcons name="account" color={color} size={26} />
+  ),
+};
+
 export default class Menu extends React.Component<IMenuProps, IMenuState> {
   constructor(props: IMenuProps) {
     super(props);
@@ -25,9 +37,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuState> {
           component={HomeScreen}
           options={{
             tabBarLabel: 'Home',
-            tabBarIcon: ({color}) => (
-              <MaterialCommunityIcons name="home" color={color} size={26} />
-            ),
+            tabBarIcon: tabBarIcons.HomeScreen,
           }}
         />
         <Tab.Screen
@@ -35,9 +45,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuState> {
           component={ReportScreen}
           options={{
             tabBarLabel: 'Report',
-            tabBarIcon: ({color}) => (
-              <MaterialCommunityIcons name="bell" color={color} size={26} />
-            ),
+            tabBarIcon: tabBarIcons.ReportScreen,
           }}
         />
         <Tab.Screen
@@ -45,9 +53,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuState> {
           component={SettingsScreen}
           options={{
             tabBarLabel: 'Settings',
-            tabBarIcon: ({color}) => (
-              <MaterialCommunityIcons name="account" color={color} size={26} />
-            ),
+            tabBarIcon: tabBarIcons.SettingsScreen,
           }}
         />
       </Tab.Navigator>
