@@ -5,8 +5,7 @@ export interface Account {
 }
 
 export interface SAccounts {
-  isLoaded: boolean;
-  selectedAccount: number | null;
+  selectedAccountId: number | null;
   accounts: Account[];
 }
 

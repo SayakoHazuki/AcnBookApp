@@ -7,10 +7,10 @@
 
 import React from 'react';
 // import type {PropsWithChildren} from 'react';
-import {SafeAreaView, useColorScheme} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, Theme} from '@react-navigation/native';
 import {
   MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
@@ -49,7 +49,7 @@ import store from './src/redux/store';
 //     </View>
 //   );
 // }
-const theme = {
+export const theme = {
   ...DefaultTheme,
   // Specify custom property
   myOwnProperty: true,
@@ -97,6 +97,7 @@ const theme = {
     backdrop: 'rgba(48, 48, 56, 0.4)',
   },
 };
+
 function App(): JSX.Element {
   const isDarkMode = false;
 
@@ -107,7 +108,7 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <PaperProvider theme={theme}>
-        <NavigationContainer theme={theme}>
+        <NavigationContainer theme={theme as unknown as Theme}>
           <SafeAreaView style={backgroundStyle}>
             <AppBar title="AcnBook" />
           </SafeAreaView>
