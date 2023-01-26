@@ -27,6 +27,7 @@ export function AddRecordButton(props: IAddRecordButtonProps) {
   const {navigation} = props;
 
   return (
+    // Todo: Replace Button with FAB
     <Button
       icon="plus"
       style={styles.floatingButton}

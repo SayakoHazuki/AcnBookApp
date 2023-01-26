@@ -15,8 +15,8 @@ import {
   MD3LightTheme as DefaultTheme,
   Provider as PaperProvider,
 } from 'react-native-paper';
-import AppBar from './src/components/AppBar';
-import Menu from './src/components/Menu';
+import AppBar from './src/components/general/AppBar';
+import Menu from './src/components/general/Menu';
 import {Provider} from 'react-redux';
 import store from './src/redux/store';
 

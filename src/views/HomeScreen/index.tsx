@@ -1,25 +1,22 @@
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
-import AccountsList from '../../components/AccountsList';
-import {AddRecordButton} from '../../components/AddRecordButton';
-import {TransactionsList} from '../../components/TransactionsList';
+import AccountsList from '../../components/HomeScreen/AccountsList';
+import {AddRecordButton} from '../../components/HomeScreen/AddRecordButton';
+import {TransactionsList} from '../../components/HomeScreen/TransactionsList';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {InputScreen} from '../InputScreen';
 
 const Stack = createNativeStackNavigator();
 
-export interface IHomeScreenProps {
-  navigation: any;
-}
+export interface IHomeScreenProps {}
 
 export interface IHomeScreenState {}
 
-export default function HomeScreen(props: IHomeScreenProps) {
+export default function HomeScreen() {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="Initial"
-        initialParams={{navigation: props.navigation}}
         component={InitialScreen}
         options={{headerShown: false}}
       />
